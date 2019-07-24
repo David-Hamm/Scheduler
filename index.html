@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<!--
+Will not have time to implement and authentication and do it 'right', for demonstration's sake,
+Adding dummy stylist data to appointment link.
+ -->
+<html lang="en" ng-app="scheduler">
+<head>
+    <meta charset="UTF-8">
+    <title>Salon Scheduler</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#!/">Salon Scheduler</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#!/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="businessDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Business Organization
+                </a>
+                <div class="dropdown-menu" aria-labelledby="businessDropdown">
+                    <a class="dropdown-item" href="#!/businessUnits">Business Units</a>
+                    <a class="dropdown-item" href="#!/salons">Salons</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="stylistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Stylist
+                </a>
+                <div class="dropdown-menu" aria-labelledby="stylistDropdown">
+                    <a class="dropdown-item" href="#!/appointments/0/0">Appointments</a>
+                    <a class="dropdown-item" href="#!/clients">Client List</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item disabled" href="#">Dashboard</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="inventoryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Inventory
+                </a>
+                <div class="dropdown-menu" aria-labelledby="inventoryDropdown">
+                    <a class="dropdown-item disabled" href="#">Add New Products</a>
+                    <a class="dropdown-item disabled" href="#">Current Inventory</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div ng-view>
+
+</div>
+
+<!-- jQuery -->
+<script src="js/jQuery.js"></script>
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Root Angular -->
+<script src="js/angular.js"></script>
+<!-- Scheduler Configuration and Instantiation -->
+<script src="js/scheduler.js"></script>
+<!-- Angular Router -->
+<script src="js/angularRouter.js"></script>
+<!-- Appointment Controller -->
+<script src="js/controller-businessUnit.js"></script>
+<!-- Client Controller -->
+<script src="js/controller-client.js"></script>
+<!-- Home Controller -->
+<script src="js/controller-home.js"></script>
+<!-- Salon Controller -->
+<script src="js/controller-salon.js"></script>
+<!-- Stylist Controller -->
+<script src="js/controller-stylist.js"></script>
+<!-- Appointment Model -->
+<script src="js/model-appointment.js"></script>
+<!-- Business Unit Model -->
+<script src="js/model-businessUnit.js"></script>
+<!-- Client Model -->
+<script src="js/model-client.js"></script>
+<!-- Home Model -->
+<script src="js/model-home.js"></script>
+<!-- Salon Model -->
+<script src="js/model-salon.js"></script>
+<!-- Stylist Model -->
+<script src="js/model-stylist.js"></script>
+
+</body>
+</html>
